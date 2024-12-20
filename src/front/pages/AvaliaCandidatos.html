@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidatos do Processo Seletivo</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/AvaliaCandidatos.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/src/front/index.html">
+                <img src="../assets/img/logo-branco.png" alt="Logo">
+            </a>
+        </div>
+        <div>
+            <a href="./BuscarVagas.html"><button class="header-btn">Vagas</button></a>
+        </div>
+        <div class="user-info">
+            <span id="userName">Usuário não identificado</span>
+        </div>
+    </header>
+
+    <h2>Candidatos</h2>
+
+    <table id="candidatosTable">
+        <thead>
+            <tr>
+                <th>Processo Seletivo ID</th>
+                <th>ID do candidato</th>
+                <th>Nome Completo</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Curriculo</th>
+                <th>Carta de Apresentação</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Candidatos serão inseridos aqui -->
+        </tbody>
+    </table>
+
+    <div id="modal-container" class="modal-container" style="display: none;"></div>
+
+    <script src="../assets/js/avaliarCandidatos.js"></script>
+</body>
+
+</html>

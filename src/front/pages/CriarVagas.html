@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Vaga</title>
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/CriarVaga.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/src/front/index.html">
+        <img src="../assets/img/logo-branco.png" alt="Libra Learn Logo">
+    </a>
+    </div>
+    <div class="header-buttons">
+      <a href="./SolicitarVagas.html"><button class="header-btn">Solicitar Vagas</button></a>
+      <a href="./CriarVagas.html"><button class="header-btn">Criar Vagas</button></a>
+      <a href="./BuscarVagas.html"><button class="header-btn">Vagas</button></a>
+  </div>
+  <div class="header-buttons-sair">
+    <a href="./Login.html"><button class="header-btn">Sair</button></a>
+  </div>
+  </nav>
+
+  <main id="container-principal">
+
+    
+    <div id="container-formulario">
+      <h1 class="container-titulo">Criar Vaga</h1>
+      <form id="formulario-criar-vaga">
+        <label for="vaga-solicitada-id">Id vaga solicitada:</label>
+        <input type="number" placeholder="" id="vaga-solicitada-id" name="vaga-solicitada-id" value="0" required>
+
+        <label for="descricao-vaga">Descrição:</label>
+        <textarea placeholder="Explique a descrição da vaga" id="descricao-vaga" name="descricao-vaga" rows="4" required></textarea>
+
+        <label for="requisitos-vaga">Requisitos:</label>
+        <textarea placeholder="Requisitos da vaga" id="requisitos-vaga" name="requisitos-vaga" rows="4" required></textarea>
+
+        <label for="salario-vaga">Salário:</label>
+        <input type="number" placeholder="1400" id="salario-vaga" name="salario-vaga" value="1400" required>
+
+        <div id="botoes-formulario">
+          <button id="botao-enviar" type="submit">Enviar para aprovação</button>
+          <button id="botao-cancelar" type="reset">Cancelar</button>
+        </div>
+      </form>
+    </div>
+    
+    <div id="container-lista-vagas">
+      <h1 class="container-titulo">Vagas Enviadas</h1>
+
+      
+    
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../assets/js/criar_vagas.js"></script>
+</body>
+
+</html>
+

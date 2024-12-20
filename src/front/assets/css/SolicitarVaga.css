@@ -1,0 +1,230 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+/* Estilo para a navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0157b2;
+  padding: 10px;
+}
+
+.logo img {
+  height: 40px; /* Aumente o tamanho da logo conforme necessário */
+}
+
+.header-buttons {
+  display: flex;
+  gap: 15px;
+  padding-right: flex;
+  
+}
+
+.header-buttons .header-btn {
+  background-color: #f0f4f8; /* Cinza claro */
+  color: #02458a; /* Azul escuro */
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px; /* Botões arredondados */
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-buttons .header-btn:hover {
+  background-color: #02458a; /* Azul escuro */
+  color: #ffffff; /* Texto branco */
+}
+
+/*Botão de Sair da pagina*/
+.header-buttons-sair .header-btn {
+  background-color: #f0f4f8; /* Cinza claro */
+  color: #02458a; /* Azul escuro */
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px; /* Botões arredondados */
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.header-buttons-sair .header-btn:hover {
+  background-color: #ff0000; /* Vermelho escuro */
+  color: #ffffff; /* Texto branco */
+}
+
+/* Main */
+
+#container-solicitacao-acompanhamento {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #0157b2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  border: 3px solid #003571;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+#container-solicitacao {
+  border-right: 2px solid white;
+  padding-right: 50px; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+}
+
+input,
+textarea, select {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+}
+
+#formulario-solicitacao input, select{
+  background-color: #003571;
+  color: white;
+}
+.container-titulo {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+label {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.email-input::placeholder {
+  color: #bbb; /* Cor do texto do placeholder */
+}
+
+#botoes-solicitacao {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#botao-enviar-solicitacao {
+  background-color: yellow;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+}
+
+#botao-cancelar-solicitacao, #botao-reprovar-solicitacao {
+  background-color: red;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+}
+
+/* VAGAS SOLICITADAS */
+
+.vaga-solicitada {
+  background-color: #003571; /* Cor de fundo para cada vaga */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 15px; /* Espaço interno */
+  margin-bottom: 15px; /* Espaço entre as vagas */
+  transition: transform 0.3s; /* Efeito de transição */
+  border: 1px solid white;
+}
+
+.vaga-titulo {
+  color: white; /* Cor do título */
+  margin: 0; /* Remove margem padrão */
+  font-size: 1.5rem; /* Tamanho do título */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vaga-justificativa,
+.vaga-quantidade,
+.vaga-categoria,
+.vaga-gerente {
+  color: white; /* Cor do texto */
+  margin: 5px 0; /* Margem vertical entre os parágrafos */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* LINHA */
+.linha-vertical {
+  width: 2px; 
+  background-color: white;
+  height: auto; /* Faz a linha ocupar todo o espaço vertical */
+  align-self: stretch; /* Para a linha ocupar o espaço total no grid */
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1245px) {
+  #container-solicitacao-acompanhamento {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #container-solicitacao-acompanhamento {
+    grid-template-columns: 1fr;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  #container-solicitacao {
+    border-right: none; /* Remove a borda lateral em telas menores */
+    padding-right: 0; /* Remove o padding lateral em telas menores */
+  }
+
+  #container-vagas-solicitadas {
+    margin-top: 30px; /* Adiciona um espaço entre as seções */
+  }
+
+  .linha-vertical {
+    width: auto; 
+    height: 2px; 
+    background-color: white; 
+  }
+}
+
+@media (max-width: 550px) {
+  #container-solicitacao-acompanhamento {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  #container-solicitacao-acompanhamento {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  #container-solicitacao-acompanhamento {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

@@ -1,0 +1,262 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 0;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #02458a;
+    /* Azul escuro */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+    height: 40px;
+}
+
+.header .user-info {
+    font-size: 16px;
+}
+
+.header .user-info span {
+    font-weight: bold;
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #0157b2;
+    font-size: 24px;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #0157b2;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Botões Gerais */
+button {
+    background-color: #f0f4f8;
+    /* Cinza claro */
+    color: #02458a;
+    /* Azul escuro */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    /* Botões arredondados */
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #02458a;
+    /* Azul escuro */
+    color: #ffffff;
+    /* Texto branco */
+    transform: scale(1.05);
+    /* Leve aumento */
+}
+
+/* Botões Específicos */
+.btn-aprovar {
+    background-color: #28a745;
+    /* Verde */
+    color: white;
+}
+
+.btn-aprovar:hover {
+    background-color: #218838;
+    /* Verde mais escuro */
+}
+
+.btn-reprovar {
+    background-color: #dc3545;
+    /* Vermelho */
+    color: white;
+}
+
+.btn-reprovar:hover {
+    background-color: #c82333;
+    /* Vermelho mais escuro */
+}
+
+.btn-agendar {
+    background-color: #0275d8;
+    /* Azul */
+    color: white;
+}
+
+.btn-agendar:hover {
+    background-color: #0256a0;
+    /* Azul mais escuro */
+}
+
+/* Modal */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: fixed;
+    /* Fixa o modal na tela */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta o ponto de referência */
+    z-index: 10000;
+    /* Prioridade para sobrepor outros elementos */
+    background-color: white;
+    /* Fundo do modal */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra para destaque */
+    max-width: 500px;
+    /* Limita a largura máxima */
+    width: 90%;
+    /* Ajusta para telas menores */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro */
+    z-index: 9999;
+    /* Colocado abaixo do modal */
+}
+
+.modal h2 {
+    color: #0157b2;
+    /* Cor do título no modal */
+    margin-bottom: 15px;
+}
+
+.modal label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.modal input,
+.modal textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.modal button {
+    background-color: #0157b2;
+    /* Azul padrão */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #014690;
+    /* Azul mais escuro */
+}
+
+.modal .fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #dc3545;
+    /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal .fechar-modal:hover {
+    background-color: #c82333;
+    /* Vermelho mais escuro */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .user-info {
+        margin-top: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    .modal {
+        padding: 15px;
+    }
+}

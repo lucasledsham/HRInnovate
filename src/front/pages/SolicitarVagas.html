@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela Profissional</title>
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/SolicitarVaga.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/src/front/index.html">
+        <img src="../assets/img/logo-branco.png" alt="Libra Learn Logo">
+    </a>
+    </div>
+    <div class="header-buttons">
+      <a href="./SolicitarVagas.html"><button class="header-btn">Solicitar Vagas</button></a>
+      <a href="./CriarVagas.html"><button class="header-btn">Criar Vagas</button></a>
+      <a href="./BuscarVagas.html"><button class="header-btn">Vagas</button></a>
+  </div>
+  <div class="header-buttons-sair">
+    <a href="./Login.html"><button class="header-btn">Sair</button></a>
+  </div>
+  </nav>
+
+  <main id="container-solicitacao-acompanhamento">
+
+    <!-- SOLICITAR VAGAS -->
+    <div id="container-solicitacao">
+      <h1 class="container-titulo">Solicitar Vaga</h1>
+      <form id="formulario-solicitacao">
+        <label for="titulo">Titulo da Vaga</label>
+        <input type="text" placeholder="Digite o título da vaga" id="titulo" name="titulo" required>
+
+        <label for="justificativa">Justificativa</label>
+        <input type="text" placeholder="Explique a necessidade da vaga" id="justificativa" name="justificativa" required>
+
+        <label for="quantidade">Quantidade de Vagas</label>
+        <input type="number" placeholder="Quantidade" id="quantidade" name="quantidade" required min="0">
+
+
+        <label for="categoria">Categoria</label>
+        <select id="categoria" name="categoria" required>
+            <option value="financeiro">Financeiro</option>
+            <option value="desenvolvimento">Desenvolvimento</option>
+            <option value="administrativo">Administrativo</option>
+        </select>
+      </form>
+
+        <div id="botoes-solicitacao">
+          <button id="botao-enviar-solicitacao">Enviar</button>
+          <button id="botao-cancelar-solicitacao">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- VAGAS SOLICITADAS -->
+    <div id="container-vagas-solicitadas">
+      <h1 class="container-titulo" id="titulo-margin">Vagas Solicitadas</h1>
+      
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="../assets/js/solicita_vagas.js"></script>
+</body>
+
+</html>

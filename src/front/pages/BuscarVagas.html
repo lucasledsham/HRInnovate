@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar e Listar Vagas</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/buscarVaga.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="logo">
+            <a href="/src/front/index.html"><img src="../assets/img/logo-branco.png" alt="Logo">
+            </a>
+        </div>
+        <div class="header-buttons">
+            <a href="./SolicitarVagas.html"><button class="header-btn">Solicitar Vagas</button></a>
+            <a href="./CriarVagas.html"><button class="header-btn">Criar Vagas</button></a>
+        </div>
+        <div class="user-info">
+            <div class="notification">
+                <span class="notification-icon">🔔</span>
+                <span class="notification-count"></span>
+            </div>
+            <span id="userName">rh</span>
+            <div class="header-buttons-sair">
+                <a href="./Login.html"><button class="header-btn">Sair</button></a>
+              </div>    
+
+            <!-- Painel de notificações -->
+            <div id="notificationPanel" class="notification-panel" style="display: none;">
+                <!-- As notificações serão carregadas aqui -->
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <h1>Vagas</h1>
+        <div>
+            <input type="text" id="searchBar" placeholder="Pesquisar vagas...">
+            <button id="clearFilter">Limpar Filtro</button>
+        </div>
+        <div id="jobList">
+
+        </div>
+
+        <div id="detalhesVaga" style="display: none;">
+            <h2>Detalhes da Vaga</h2>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="jobDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="jobTitle"></h2>
+            <p id="jobDetails"></p>
+            <p id="jobRequirements"></p>
+            <p id="jobSalary"></p>
+            <div class="containerCurriculo">
+                <h1>Enviar Currículo</h1>
+                <form id="resumeForm" enctype="multipart/form-data" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="fullName">Nome Completo:</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="coverLetter">Carta de Apresentação:</label>
+                        <textarea id="coverLetter" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="resume">Currículo (PDF):</label>
+                        <input type="file" id="resume" accept=".pdf">
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/buscarVaga.js"></script>
+    <script src="../assets/js/avaliarCandidatos.js"></script>
+</body>
+
+</html>

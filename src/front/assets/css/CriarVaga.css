@@ -1,0 +1,289 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ /* Estilo para a navegação */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #0157b2;
+padding: 10px;
+}
+
+.logo img {
+height: 40px; /* Aumente o tamanho da logo conforme necessário */
+}
+
+.header-buttons {
+  display: flex;
+  gap: 15px;
+  padding-right: flex;
+}
+
+.header-buttons .header-btn {
+  background-color: #f0f4f8; /* Cinza claro */
+  color: #02458a; /* Azul escuro */
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px; /* Botões arredondados */
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-buttons .header-btn:hover {
+  background-color: #02458a; /* Azul escuro */
+  color: #ffffff; /* Texto branco */
+}
+
+/*Botão de Sair da pagina*/
+.header-buttons-sair .header-btn {
+  background-color: #f0f4f8; /* Cinza claro */
+  color: #02458a; /* Azul escuro */
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px; /* Botões arredondados */
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.header-buttons-sair .header-btn:hover {
+  background-color: #ff0000; /* Vermelho escuro */
+  color: #ffffff; /* Texto branco */
+}
+
+/* Main Container */
+#container-principal {
+  width: 1200px;
+  margin: auto;
+  background-color: #0157b2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  border: 3px solid #003571;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+/* Formulário */
+#container-formulario {
+  border-right: 2px solid white;
+  padding-right: 50px; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  color: white;
+}
+
+input, select, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: #003571;
+  color: white;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.container-titulo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#botoes-formulario {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+#botao-enviar {
+  background-color: lightskyblue;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px;
+  border: none;
+}
+
+#botao-cancelar {
+  background-color: red;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+}
+/* Lista de Vagas */
+/* Container onde as vagas são exibidas */
+#container-lista-vagas {
+padding-left: 0;  /* Remover o padding à esquerda */
+max-width: 1200px; /* Largura máxima do container */
+width: 100%; /* Faz o container ocupar toda a largura disponível */
+margin: auto; /* Centraliza o container */
+height: 500px; /* Defina uma altura fixa para o container */
+overflow-y: auto; /* Adiciona rolagem vertical caso o conteúdo seja maior que a altura */
+box-sizing: border-box; /* Garantir que o padding e border não quebrem o layout */
+}
+
+/* Vagas criadas */
+.vaga-criada {
+background-color: #003571; /* Cor de fundo para cada vaga */
+border-radius: 10px; /* Bordas arredondadas */
+padding: 15px; /* Espaço interno */
+margin-bottom: 15px; /* Espaço entre as vagas */
+transition: transform 0.3s; /* Efeito de transição */
+border: 1px solid white;
+word-wrap: break-word; /* Quebra as palavras grandes para não estourar o layout */
+white-space: normal; /* Permite que o texto seja quebrado em múltiplas linhas */
+margin-left: 0;  /* Remove qualquer margem à esquerda */
+margin-right: 0; /* Remove qualquer margem à direita */
+}
+
+/* Títulos e textos dentro das vagas */
+.vaga-titulo {
+color: white;
+margin: 0;
+font-size: 1.5rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+word-wrap: break-word;
+}
+
+.vaga-descricao,
+.vaga-requisitos,
+.vaga-salario,
+.vaga-status {
+color: white;
+margin: 5px 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+word-wrap: break-word;
+white-space: normal;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+#container-principal {
+  grid-template-columns: 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#container-formulario {
+  border-right: none;
+  padding-right: 0;
+}
+
+#container-lista-vagas {
+  padding-left: 0; /* Ajuste o padding para pequenas telas */
+}
+}
+
+.botao-aprovar {
+  background-color: green;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+}
+
+.botao-reprovar {
+  background-color: red;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+}
+
+.botao-deletar {
+  background-color: grey;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@media (max-width: 550px) {
+#container-principal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+#container-principal {
+  grid-template-columns: 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#container-formulario {
+  border-right: none;
+  padding-right: 0;
+}
+
+#container-lista-vagas {
+  padding-left: 0; /* Ajuste o padding para pequenas telas */
+}
+}
+
+@media (max-width: 550px) {
+#container-principal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+#container-principal {
+  grid-template-columns: 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#container-formulario {
+  border-right: none;
+  padding-right: 0;
+}
+}
+
+@media (max-width: 550px) {
+#container-principal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+}
