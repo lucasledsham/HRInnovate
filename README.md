@@ -103,7 +103,7 @@ Se você ainda não tem o Java 17 instalado, siga as instruções abaixo:
 Abra o terminal e execute o seguinte comando para clonar o repositório:
 
 ```sh
-git clone https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-2-ti2-1381100-hr-innovate.git
+git clone https://github.com/lucasledsham/HRInnovate.git
 
 ```
 
